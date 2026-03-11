@@ -1,0 +1,33 @@
+.header {
+    background-color: #202427;
+    color: #ffff;
+    padding: 5px;
+    margin: 2px;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia;
+}
+
+section {
+    padding: 5px;
+    margin: 2px;
+    border-top: 1px solid black;
+}
+
+.footer {
+    background-color: #202427;
+    color: #ffff;
+    padding: 5px;
+    margin: 2px;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
