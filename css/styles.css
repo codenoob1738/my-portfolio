@@ -3,13 +3,18 @@
     color: #ffff;
     padding: 5px;
     margin: 2px;
+    margin-bottom: 1px;
 }
 
-.nav-list{
+.nav-list {
     list-style: none;
-    display: flex;
-    gap: 5px;
     padding: 0;
+    margin: 1px;
+}
+
+.nav-list li {
+    display: inline;
+    padding: 2px 5px;
 }
 
 body {
@@ -26,8 +31,41 @@ section {
     background-color: #202427;
     color: #ffff;
     padding: 5px;
-    margin: 2px;
+    margin: 1px;
     position:fixed;
     bottom:0;
     width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+h1 {
+    text-align: center; 
+}
+
+h2 {
+    color: #202427;
+}
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 8px;
+    }
+
+    .nav-list li {
+        display: block;
+        padding: 8px;
+        text-align: center;
+    }
+
+    section {
+        padding: 8px;
+        margin: 1px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
 }
