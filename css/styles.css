@@ -1,15 +1,14 @@
-.header {
-    background-color: #202427;
-    color: #ffff;
+body {
+    color: #202427;
     padding: 5px;
     margin: 2px;
-    margin-bottom: 1px;
 }
 
 .nav-list {
     list-style: none;
     padding: 0;
     margin: 1px;
+    text-align: right;
 }
 
 .nav-list li {
@@ -24,7 +23,6 @@ body {
 section {
     padding: 5px;
     margin: 2px;
-    border-top: 1px solid black;
 }
 
 .footer {
@@ -32,15 +30,15 @@ section {
     color: #ffff;
     padding: 5px;
     margin: 1px;
-    position:fixed;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 12px;
 }
 
 h1 {
-    text-align: center; 
+    text-align: center;
 }
 
 h2 {
