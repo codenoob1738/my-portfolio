@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-    position: sticky;
+    position: relative;
     top: 0;
     margin-bottom: 20px;
 }
@@ -47,7 +47,7 @@ section {
     color: #ffff;
     padding: 5px;
     margin: 1px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -97,4 +97,18 @@ h2 {
 
 .projectSection {
     grid-column: span 2;
+}
+
+.projects-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1em;
+}
+
+.box {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
 }
