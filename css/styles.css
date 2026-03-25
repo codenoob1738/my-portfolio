@@ -2,6 +2,12 @@ body {
     color: #202427;
     padding: 5px;
     margin: 2px;
+
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
 }
 
 .nav-list {
