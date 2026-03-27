@@ -6,6 +6,12 @@ for (let i = 0; i < buttons.length; i++) {
     button.addEventListener("click", function () {
         let details = this.nextElementSibling;
 
+        if(this.textContent === "Show Details") {
+            this.textContent = "Hide Details";
+        } else {
+            this.textContent = "Show Details";
+        }
+
         if (details.style.display === "block") {
             details.style.display = "none";
         } else {
