@@ -38,6 +38,6 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
-    alert("Form submitted successfully!");
+    alert("Message submitted! 📫");
     form.reset();
 });

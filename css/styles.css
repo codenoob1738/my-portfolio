@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid grey;
 }
 
 .nav-list {
@@ -37,7 +37,7 @@ body {
 }
 
 section {
-    border: 1px solid white;
+    border: 1px solid grey;
     border-radius: 8px;
     width: 100%;
     padding: 5px;
@@ -61,6 +61,7 @@ h1 {
 
 h2 {
     color: white;
+    text-align: center;
 }
 
 @media (max-width: 480px) {
@@ -78,7 +79,7 @@ h2 {
     section {
         padding: 8px;
         margin: 1px;
-        border: 1px solid white;
+        border: 1px solid grey;
         border-radius: 8px;
     }
 
@@ -107,8 +108,36 @@ h2 {
 }
 
 .project-box {
-    border: 1px solid white;
+    border: 1px solid grey;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 5px;
+}
+
+#submit {
+    background-color: #0065F8;
+    color: white;
+    padding: 5px 10px;
+    border: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #08CB00;
+    cursor: pointer;
+}
+
+.detailsButton {
+    background-color: #0065F8;
+    color: white;
+    padding: 5px 10px;
+    border: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.detailsButton:hover {
+    background-color: #08CB00;
+    cursor: pointer;
 }
