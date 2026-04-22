@@ -270,3 +270,9 @@ body.dark-mode #toggleFilter {
     color: #e0e0e0;
     border: 1px solid #e0e0e0;
 }
+
+body.dark-mode .filter-buttons button {
+    background-color: rgba(74, 124, 138, 0.25);
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+}
