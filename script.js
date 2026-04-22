@@ -61,3 +61,10 @@ if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark-mode");
 }
 
+const toggleButtons = document.querySelectorAll("toggleFilter");
+const filter = document.getElementById("filter-buttons");
+
+toggleButtons.addEventListener("click", function () {
+    filter.classList.toggle("hidden");
+});
+
