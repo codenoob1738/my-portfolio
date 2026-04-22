@@ -61,10 +61,37 @@ if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark-mode");
 }
 
-const toggleButtons = document.querySelectorAll("toggleFilter");
-const filter = document.getElementById("filter-buttons");
+document.addEventListener("DOMContentLoaded", () => {
 
-toggleButtons.addEventListener("click", function () {
-    filter.classList.toggle("hidden");
+    const toggleButton = document.querySelector("#toggleFilter");
+    const filterContainer = document.querySelector(".filter-buttons");
+
+    console.log("toggle:", toggleButton);
+    console.log("container:", filterContainer);
+
+    toggleButton.addEventListener("click", () => {
+        console.log("clicked");
+        filterContainer.classList.toggle("hidden");
+    });
+
 });
 
+const filterButtons = document.querySelectorAll('.filter-buttons button');
+const projects = document.querySelectorAll('.project-box');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        const filter = button.getAttribute('data-filter');
+
+        projects.forEach(project => {
+            const projectType = project.getAttribute('project-type');
+
+            if (filter === 'all' || projectType === filter) {
+                project.style.display = '';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    });
+});
