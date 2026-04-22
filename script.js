@@ -65,19 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toggleButton = document.querySelector("#toggleFilter");
     const filterContainer = document.querySelector(".filter-buttons");
+    const filterButtons = document.querySelectorAll('.filter-buttons button');
+    const projects = document.querySelectorAll('.project-box');
 
-    console.log("toggle:", toggleButton);
-    console.log("container:", filterContainer);
 
     toggleButton.addEventListener("click", () => {
-        console.log("clicked");
         filterContainer.classList.toggle("show");
     });
-
-});
-
-const filterButtons = document.querySelectorAll('.filter-buttons button');
-const projects = document.querySelectorAll('.project-box');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -93,5 +87,7 @@ filterButtons.forEach(button => {
                 project.style.display = 'none';
             }
         });
+        filterContainer.classList.remove("show");
     });
+});
 });
