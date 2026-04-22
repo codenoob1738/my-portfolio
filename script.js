@@ -6,7 +6,7 @@ for (let i = 0; i < buttons.length; i++) {
     button.addEventListener("click", function () {
         let details = this.nextElementSibling;
 
-        if(this.textContent === "Show Details") {
+        if (this.textContent === "Show Details") {
             this.textContent = "Hide Details";
         } else {
             this.textContent = "Show Details";
@@ -22,7 +22,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const name = document.getElementById("name").value.trim();
@@ -31,7 +31,7 @@ form.addEventListener("submit", function(event) {
 
     if (name === "") {
         alert("Please enter your full name.");
-        return; 
+        return;
     }
 
     if (email === "") {
@@ -49,6 +49,15 @@ form.addEventListener("submit", function(event) {
 });
 
 const darkModeBtn = document.getElementById("darkModeBtn");
-darkModeBtn.addEventListener("click", function() {
+darkModeBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
+
+    const darkActive = document.body.classList.contains("dark-mode");
+    localStorage.setItem("darkMode", darkActive);
+
 });
+
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark-mode");
+}
+
