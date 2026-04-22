@@ -399,3 +399,26 @@ body.dark-mode .filter-buttons button {
         padding: 10px 5px;
     }
 }
+
+@media (min-width: 1200px) {
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .projects-card {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .nav-list li a {
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
