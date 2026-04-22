@@ -299,3 +299,103 @@ body.dark-mode .filter-buttons button {
         padding: 10px;
     }
 }
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .nav-list li {
+        display: block;
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-list li a {
+        font-size: 0.85rem;
+    }
+
+    .dark-mode-button {
+        font-size: 18px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        gap: 10px;
+    }
+
+    .projectSection {
+        grid-column: span 1;
+    }
+
+    .projects-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .project-box {
+        padding: 8px;
+        margin-bottom: 3px;
+    }
+
+    .project-box img {
+        height: 150px;
+    }
+
+    section {
+        padding: 8px;
+        margin: 1px;
+        border: 1px solid grey;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 0.95rem;
+    }
+
+    #submit, .detailsButton {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .filter-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .filter-buttons button {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
+    #toggleFilter {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        font-size: 10px;
+        padding: 10px 5px;
+    }
+}
