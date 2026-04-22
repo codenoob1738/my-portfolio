@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleButton.addEventListener("click", () => {
         console.log("clicked");
-        filterContainer.classList.toggle("hidden");
+        filterContainer.classList.toggle("show");
     });
 
 });

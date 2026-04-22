@@ -221,21 +221,38 @@ body.dark-mode #submit:hover {
     color: white;
 }
 
-.hidden {
-    display: none;
-}
-
 .filter-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .filter-buttons {
     margin-top: 10px;
-    background-color: #89a8e0;
     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.filter-buttons button {
+    background-color: rgba(137, 168, 224, 0.25);
+    color: #3a555c;
+    padding: 5px 10px;
+    border: 1px solid #3a555c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-buttons.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 #toggleFilter {
