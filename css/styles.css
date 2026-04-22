@@ -88,7 +88,7 @@ section {
     color: #5c4d7d;
     padding: 5px;
     margin: 1px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -106,7 +106,8 @@ h2 {
     text-align: center;
 }
 
-body.dark-mode h1, body.dark-mode h2 {
+body.dark-mode h1,
+body.dark-mode h2 {
     color: #e0e0e0;
 }
 
@@ -226,17 +227,20 @@ body.dark-mode #submit:hover {
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .filter-buttons {
-    margin-top: 10px;
-    gap: 10px;
+    margin-top: 8px;
+    gap: 8px;
     display: flex;
     flex-direction: column;
     opacity: 0;
     transition: all 0.3s ease;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     pointer-events: none;
+    overflow: hidden;
+    max-height: 0;
 }
 
 .filter-buttons button {
@@ -253,6 +257,7 @@ body.dark-mode #submit:hover {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+    max-height: 200px;
 }
 
 #toggleFilter {
