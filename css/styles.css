@@ -1,21 +1,26 @@
+.filter-container,
+.footer,
+.header {
+    position: relative
+}
+
 body {
     color: #3d3d3d;
     padding: 2px;
     margin: 4px;
     font-family: Georgia;
-    transition: background 0.4s ease;
+    transition: background .4s;
     background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
     min-height: 100vh;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
 body.dark-mode {
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-    color: #e0e0e0;
+    color: #e0e0e0
 }
 
 .header {
-    position: relative;
     top: 0;
     margin-bottom: 20px;
     padding: 10px 15px
@@ -25,55 +30,61 @@ body.dark-mode {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid grey
 }
 
 .nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: right;
+    text-align: right
+}
+
+.footer,
+h2 {
+    color: #5c4d7d;
+    text-align: center
 }
 
 .nav-list li {
     display: inline;
-    padding: 2px 5px;
+    padding: 2px 5px
 }
 
 .nav-list li a {
     text-decoration: none;
     color: #3d3d3d;
-    font-weight: bold;
+    font-weight: 700
 }
 
-body.dark-mode .nav-list li a {
-    color: #e0e0e0;
+body.dark-mode .footer,
+body.dark-mode .nav-list li a,
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #e0e0e0
 }
 
 .dark-mode-button {
-    background: none;
+    background: 0 0;
     border: none;
     cursor: pointer;
     font-size: 22px;
     padding: 6px;
     border-radius: 50%;
-    transition: background-color 0.2s;
+    transition: background-color .2s
 }
 
 .dark-mode-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, .1)
 }
 
-.dark-mode-icon {
-    display: none;
-}
-
+.dark-mode-icon,
 body.dark-mode .light-mode-icon {
-    display: none;
+    display: none
 }
 
 body.dark-mode .dark-mode-icon {
-    display: inline;
+    display: inline
 }
 
 section {
@@ -82,57 +93,50 @@ section {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .footer {
-    color: #5c4d7d;
     padding: 15px 5px;
-    margin: 1px;
-    position: relative;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 50px;
+    margin: 50px 1px 1px;
+    font-size: 12px
+}
+
+#submit,
+.detailsButton {
+    transition: background-color .2s;
+    font-size: .9rem;
+    color: #fff;
+    background-color: #89a8e0
 }
 
 h1 {
     text-align: left;
     font-size: 1.5rem;
     color: #5c4d7d;
-    margin: 10px 0;
+    margin: 10px 0
 }
 
 h2 {
-    color: #5c4d7d;
-    text-align: center;
-    font-size: 1.3rem;
-}
-
-body.dark-mode h1,
-body.dark-mode h2 {
-    color: #e0e0e0;
-}
-
-body.dark-mode .footer {
-    color: #e0e0e0;
+    font-size: 1.3rem
 }
 
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 15px;
+    padding: 15px
 }
 
 .projectSection {
-    grid-column: span 2;
+    grid-column: span 2
 }
 
 .projects-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    gap: 1em;
+    gap: 1em
 }
 
 .project-box {
@@ -140,7 +144,14 @@ body.dark-mode .footer {
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 5px;
-    overflow: hidden;
+    overflow: hidden
+}
+
+#toggleFilter,
+.detailsButton,
+.filter-buttons button {
+    padding: 5px 10px;
+    cursor: pointer
 }
 
 .project-box img {
@@ -148,67 +159,44 @@ body.dark-mode .footer {
     height: 180px;
     object-fit: cover;
     border-radius: 6px;
-    display: block;
+    display: block
 }
 
 #submit {
-    background-color: #89a8e0;
-    color: white;
     padding: 8px 15px;
     border: hidden;
     border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    font-size: 0.9rem;
+    cursor: pointer
 }
 
-#submit:hover {
+#submit:hover,
+.detailsButton:hover {
     background-color: #5c6f85;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .detailsButton {
-    background-color: #89a8e0;
-    color: white;
-    padding: 5px 10px;
     border: hidden;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-     font-size: 0.9rem;
+    border-radius: 4px
 }
 
-.detailsButton:hover {
-    background-color: #5c6f85;
-    cursor: pointer;
-}
-
+body.dark-mode #submit,
 body.dark-mode .detailsButton {
     background-color: #4a7c8a;
-    color: white;
+    color: #fff
 }
 
-body.dark-mode #submit {
-    background-color: #4a7c8a;
-    color: white;
-}
-
+body.dark-mode #submit:hover,
 body.dark-mode .detailsButton:hover {
     background-color: #3a555c;
-    color: white;
-}
-
-body.dark-mode #submit:hover {
-    background-color: #3a555c;
-    color: white;
+    color: #fff
 }
 
 .filter-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 10px;
-    position: relative;
+    margin-bottom: 10px
 }
 
 .filter-buttons {
@@ -217,185 +205,176 @@ body.dark-mode #submit:hover {
     display: flex;
     flex-direction: column;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: .3s;
     transform: translateY(-5px);
     pointer-events: none;
     overflow: hidden;
-    max-height: 0;
+    max-height: 0
 }
 
 .filter-buttons button {
-    background-color: rgba(137, 168, 224, 0.25);
+    background-color: rgba(137, 168, 224, .25);
     color: #3a555c;
-    padding: 5px 10px;
     border: 1px solid #3a555c;
     border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    transition: .2s
 }
 
 .filter-buttons.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    max-height: 200px;
+    max-height: 200px
 }
 
 #toggleFilter {
     background-color: #89a8e0;
     color: #3a555c;
-    padding: 5px 10px;
     border: 1px solid #3a555c;
     border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color .3s, transform .2s
 }
 
 body.dark-mode #toggleFilter {
     background-color: #4a7c8a;
     color: #e0e0e0;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e0e0e0
 }
 
 body.dark-mode .filter-buttons button {
-    background-color: rgba(74, 124, 138, 0.25);
+    background-color: rgba(74, 124, 138, .25);
     color: #e0e0e0;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e0e0e0
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
+
+    .content,
+    section {
+        padding: 10px
+    }
+
     .content {
         grid-template-columns: 1fr;
-        padding: 10px;
-        gap: 15px;
+        gap: 15px
     }
 
     .projectSection {
-        grid-column: span 1;
+        grid-column: span 1
     }
 
     .projects-card {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 15px
     }
 
     .nav-list {
-        gap: 10px;
+        gap: 10px
     }
 
     .nav-list li a {
-        font-size: 0.9rem;
+        font-size: .9rem
     }
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.3rem
     }
 
     h2 {
-        font-size: 1.1rem;
-    }
-
-    section {
-        padding: 10px;
+        font-size: 1.1rem
     }
 }
 
-@media (max-width: 480px) {
-    .header {
-        padding: 8px;
+@media (max-width:480px) {
+
+    .content,
+    .header,
+    .project-box,
+    section {
+        padding: 8px
     }
 
     .nav {
         flex-direction: column;
-        gap: 10px;
+        gap: 10px
     }
 
     .nav-list {
         flex-direction: column;
         gap: 5px;
-        width: 100%;
+        width: 100%
+    }
+
+    .content,
+    .projects-card {
+        grid-template-columns: 1fr;
+        gap: 10px
     }
 
     .nav-list li {
         display: block;
         padding: 8px;
         text-align: center;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #ddd
     }
 
     .nav-list li:last-child {
-        border-bottom: none;
+        border-bottom: none
     }
 
     .nav-list li a {
-        font-size: 0.85rem;
+        font-size: .85rem
     }
 
     .dark-mode-button {
-        font-size: 18px;
-    }
-
-    .content {
-        grid-template-columns: 1fr;
-        padding: 8px;
-        gap: 10px;
+        font-size: 18px
     }
 
     .projectSection {
-        grid-column: span 1;
-    }
-
-    .projects-card {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-column: span 1
     }
 
     .project-box {
-        padding: 8px;
-        margin-bottom: 3px;
+        margin-bottom: 3px
     }
 
     .project-box img {
-        height: 150px;
+        height: 150px
     }
 
     section {
-        padding: 8px;
         margin: 1px;
         border: 1px solid grey;
-        border-radius: 8px;
+        border-radius: 8px
     }
 
     h1 {
-        font-size: 1.1rem;
+        font-size: 1.1rem
     }
 
     h2 {
-        font-size: 0.95rem;
+        font-size: .95rem
     }
 
-    #submit, .detailsButton {
+    #submit,
+    .detailsButton {
         padding: 6px 10px;
-        font-size: 0.85rem;
+        font-size: .85rem
     }
 
     .filter-buttons {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap
     }
 
+    #toggleFilter,
     .filter-buttons button {
         padding: 6px 8px;
-        font-size: 0.8rem;
-    }
-
-    #toggleFilter {
-        padding: 6px 8px;
-        font-size: 0.8rem;
+        font-size: .8rem
     }
 
     .footer {
         font-size: 10px;
-        padding: 10px 5px;
+        padding: 10px 5px
     }
 }
