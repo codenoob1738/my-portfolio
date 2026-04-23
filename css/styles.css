@@ -15,6 +15,70 @@ body {
     scroll-behavior: smooth
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    bottom: -100px;
+    left: 20%;
+    width: 200px;
+    height: 60px;
+    background: radial-gradient(ellipse 100px 30px at 30% 50%, rgba(255,255,255,0.8), transparent),
+                radial-gradient(ellipse 120px 40px at 70% 50%, rgba(255,255,255,0.85), transparent);
+    border-radius: 100px;
+    animation: rise-cloud-1 12s infinite ease-in;
+    pointer-events: none;
+    z-index: -1
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -100px;
+    left: 60%;
+    width: 220px;
+    height: 50px;
+    background: radial-gradient(ellipse 90px 25px at 35% 50%, rgba(255,255,255,0.75), transparent),
+                radial-gradient(ellipse 110px 35px at 65% 50%, rgba(255,255,255,0.8), transparent);
+    border-radius: 100px;
+    animation: rise-cloud-2 14s infinite ease-in;
+    pointer-events: none;
+    z-index: -1
+}
+
+@keyframes rise-cloud-1 {
+    0% {
+        bottom: -100px;
+        opacity: 0
+    }
+    10% {
+        opacity: 0.8
+    }
+    90% {
+        opacity: 0.8
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0
+    }
+}
+
+@keyframes rise-cloud-2 {
+    0% {
+        bottom: -100px;
+        opacity: 0
+    }
+    10% {
+        opacity: 0.75
+    }
+    90% {
+        opacity: 0.75
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0
+    }
+}
+
 body.dark-mode {
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
     color: #e0e0e0
@@ -42,21 +106,24 @@ body.dark-mode::before {
 
 body.dark-mode::before {
     animation: twinkle 5s infinite;
-    background-image: 
-        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 60px 70px, #fff, rgba(0,0,0,0)),
-        radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0,0,0,0)),
-        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 90px 10px, #eee, rgba(0,0,0,0)),
-        radial-gradient(1px 1px at 10px 90px, #fff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 130px 130px, #ddd, rgba(0,0,0,0)),
-        radial-gradient(1px 1px at 80px 120px, #eee, rgba(0,0,0,0))
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 60px 70px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 90px 10px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 10px 90px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 130px 130px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 80px 120px, #eee, rgba(0, 0, 0, 0))
 }
 
 @keyframes twinkle {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3
     }
+
     50% {
         opacity: 1
     }
