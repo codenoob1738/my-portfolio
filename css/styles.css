@@ -455,11 +455,11 @@ body.dark-mode .filter-buttons button {
     }
 
     h1 {
-        font-size: 1.1rem
+        font-size: 24px
     }
 
     h2 {
-        font-size: .95rem
+        font-size: 22px
     }
 
     #submit,
@@ -483,4 +483,14 @@ body.dark-mode .filter-buttons button {
         font-size: 10px;
         padding: 10px 5px
     }
+}
+
+body {
+    font-size: 18px;
+    padding: 20px
+}
+
+p {
+    font-size: 16px;
+    padding: 10px
 }
