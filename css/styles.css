@@ -28,28 +28,31 @@ h2 {
 body {
     color: #3d3d3d;
     padding: 2px;
-    margin: 4px;
+    margin: 0;
     font-family: Georgia;
     transition: background .4s;
     background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
     min-height: 100vh;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overflow-x: hidden
 }
 
 body::before {
-    left: 20%;
+    left: max(0px, min(20%, calc(100vw - 200px)));
     width: 200px;
     height: 60px;
     background: radial-gradient(ellipse 100px 30px at 30% 50%, rgba(255, 255, 255, .8), transparent), radial-gradient(ellipse 120px 40px at 70% 50%, rgba(255, 255, 255, .85), transparent);
-    animation: 12s ease-in infinite rise-cloud-1
+    animation: 12s ease-in infinite rise-cloud-1;
+    transition: opacity .4s
 }
 
 body::after {
-    left: 60%;
+    left: max(0px, min(60%, calc(100vw - 220px)));
     width: 220px;
     height: 50px;
     background: radial-gradient(ellipse 90px 25px at 35% 50%, rgba(255, 255, 255, .75), transparent), radial-gradient(ellipse 110px 35px at 65% 50%, rgba(255, 255, 255, .8), transparent);
-    animation: 14s ease-in infinite rise-cloud-2
+    animation: 14s ease-in infinite rise-cloud-2;
+    transition: opacity .4s
 }
 
 @keyframes rise-cloud-1 {
@@ -105,7 +108,9 @@ body.dark-mode::before {
     background-repeat: repeat;
     background-size: 200px 200px;
     animation: 5s infinite twinkle;
-    background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 60px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 10px, #eee, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 10px 90px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 130px 130px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 80px 120px, #eee, rgba(0, 0, 0, 0))
+    background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 60px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 10px, #eee, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 10px 90px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 130px 130px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 80px 120px, #eee, rgba(0, 0, 0, 0));
+    opacity: 1;
+    transition: opacity .4s
 }
 
 @keyframes twinkle {
